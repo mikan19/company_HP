@@ -1,0 +1,289 @@
+/* * {
+
+  outline: 1px #000 solid;
+  
+  }
+ */
+body {
+  margin: 0;
+  font-family:'Yu Gothic', 'YuGothic', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'MS Ｐゴシック', 'MS PGothic', sans-serif;
+  /* background-color: aqua; */
+
+
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 90px;
+  background-color:#5c4e37;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top_img{
+  width: 90px;
+}
+
+.top_menu {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  height: auto;
+  top: 0;
+  margin-top: 35px; /*後でこれでいいか確認*/
+  /* padding: 0 0 10px 0; */
+}
+
+header ul{
+  display: flex;
+  justify-content: flex-end;
+}
+
+header li{
+  margin-right: 50px;
+}
+
+header li a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* .contents{
+  margin-top: 90px;
+} */
+
+/* main{
+  margin-top: 90px;
+} */
+
+.topcontents_img{
+  width: 100%;
+}
+
+
+/* h2見出し */
+h2{
+  text-align: center;
+  margin-top: 120px;
+  margin-bottom: 70px;
+}
+
+/* こだわり */
+.introduction_contents {
+  display: flex;
+  justify-content: space-around;
+}
+
+.introduction_text{
+  line-height: 3;
+  font-size: 15px;
+  padding-top: 60px;
+  width: 550px;
+}
+
+.coffee_img{
+  border-radius: 50px 50px 50px 50px;
+  width: 500px;
+  height: 350px;
+  object-fit: cover; /* 画像が正方形の枠内に収まるようにする */
+
+}
+
+.cake_img{
+  border-radius: 50px 50px 50px 50px;
+  width: 500px;
+  height: 350px;
+  object-fit: cover; /* 画像が正方形の枠内に収まるようにする */
+  margin-top: 30px;
+}
+
+/* メニュー紹介 */
+table img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover; /* 画像が正方形の枠内に収まるようにする */
+}
+
+table {
+  margin: 20px auto; /* 上下のマージンを20px、左右のマージンを自動 */
+  border-spacing: 20px; 
+  text-align: center;
+}
+
+
+
+.sweets_menu{
+  padding-top: 80px;
+}
+
+/* アクセス */
+.access{
+  margin-bottom: 150px;
+}
+
+/* アクセス 中央にしたい*/
+.map{
+  display: flex;
+  justify-content: center; /* 横方向の中央揃え */
+  align-items: center; /* 縦方向の中央揃え */
+  margin-bottom: 100px;
+}
+
+/* 最後に確認する */
+iframe {
+  max-width: 100%;
+  /* height: auto; */
+  border: 0;
+}
+
+
+.about_shop{
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.about_shop img{
+  width: 500px;
+  height: 350px;
+}
+
+.about_shop li{
+  /* list-style: none;
+  text-decoration: underline;
+  line-height: 4; */
+
+  list-style: none;
+  border-bottom: 1px solid black; /* アンダーラインの代わりにボーダーを使用 */
+  padding-bottom: 4px; /* 文字とボーダーの間にスペースを追加 */
+  line-height: 4;
+
+}
+
+footer {
+  width: 100%;
+  height: 300px;
+  background-color:#5c4e37;
+}
+
+footer h3{
+  text-align: center;
+  padding-top: 50px;
+  font-size: 30px;
+}
+
+
+.footer_info{
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+  
+}
+
+.footer_info p, .footer_info a {
+  margin: 0 5px;
+  font-size: 25px;
+  color: black;
+}
+
+
+footer p{
+  text-align: center;
+  margin-top: 120px;
+  font-size: 10px;
+}
+
+/* メディアクエリを使ったレスポンシブデザイン */
+
+/* タブレット用 */
+@media screen and (max-width: 959px) {
+  header {
+    height: 70px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top_menu {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  header li {
+    margin-right: 30px;
+  }
+
+  .introduction_contents {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .coffee_img,
+  .cake_img,
+  table img {
+    width: 80%;
+    height: auto;
+  }
+
+  .about_shop img {
+    width: 80%;
+    height: auto;
+  }
+}
+
+/* スマートフォン用 */
+@media screen and (max-width: 480px) {
+  header {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top_menu {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  header li {
+    margin: 10px 0;
+  }
+
+  .introduction_contents {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .coffee_img,
+  .cake_img,
+  table img {
+    width: 90%;
+    height: auto;
+  }
+
+  .map {
+    height: 50vh;
+  }
+
+  .about_shop {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about_shop img {
+    width: 90%;
+    height: auto;
+  }
+
+  .footer_info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer_info p, .footer_info a {
+    font-size: 20px;
+  }
+}
+
